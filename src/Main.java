@@ -1,4 +1,6 @@
+import com.aluracursos.screenmatch.calculations.RecommendationFilter;
 import com.aluracursos.screenmatch.calculations.TimeCalculator;
+import com.aluracursos.screenmatch.models.Episode;
 import com.aluracursos.screenmatch.models.Movie;
 import com.aluracursos.screenmatch.models.Series;
 
@@ -34,5 +36,15 @@ public class Main {
         calculator.include(series);
         calculator.include(movie2);
         System.out.println("Tiempo necesario para ver tus títulos favoritos estas vacaciones: " + calculator.getTotalTime() + "minutos");
+
+        Episode episode = new Episode();
+        episode.setNumber(1);
+        episode.setName("La casa Targaryen");
+        episode.setSeries(series);
+        episode.setTotalViews(50);
+
+        RecommendationFilter recommendationFilter = new RecommendationFilter();
+        recommendationFilter.filter(movie1);
+        recommendationFilter.filter(episode);
     }
 }
