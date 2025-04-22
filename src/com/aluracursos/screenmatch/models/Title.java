@@ -8,6 +8,11 @@ public class Title {
     private int scoreCounter;
     private double totalScore;
 
+    public Title(String title, int dateOfRelease) {
+        this.title = title;
+        this.dateOfRelease = dateOfRelease;
+    }
+
     public void showDetails() {
         System.out.println("El nombre de la película es: " + title);
         System.out.println("Su fecha de lanzamiento es: " + dateOfRelease);

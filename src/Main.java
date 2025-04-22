@@ -8,9 +8,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Movie movie1 = new Movie();
-        movie1.setTitle("Encanto");
-        movie1.setDateOfRelease(2021);
+        Movie movie1 = new Movie("Encanto", 2021);
         movie1.setDuration(180);
         movie1.setIncludedInPlan(true);
         // movie1.showDetails();
@@ -19,14 +17,10 @@ public class Main {
         // System.out.println(movie1.calculateAverage());
         // System.out.println(movie1.getScoreCounter());
 
-        Movie movie2 = new Movie();
-        movie2.setTitle("Matrix");
-        movie2.setDateOfRelease(1998);
+        Movie movie2 = new Movie("Matrix", 1998);
         movie2.setDuration(180);
 
-        Series series = new Series();
-        series.setTitle("La casa del dragón");
-        series.setDateOfRelease(2022);
+        Series series = new Series("La casa del dragón", 2022);
         series.setSeasons(1);
         series.setMinutesPerEpisode(50);
         series.setEpisodesPerSeason(10);
@@ -49,10 +43,8 @@ public class Main {
         recommendationFilter.filter(movie1);
         recommendationFilter.filter(episode);
 
-        var movie3 = new Movie();
-        movie3.setTitle("El Señor de los Anillos");
+        var movie3 = new Movie("El Señor de los Anillos", 2001);
         movie3.setDuration(180);
-        movie3.setDateOfRelease(2001);
 
         ArrayList<Movie> movieList = new ArrayList<>();
         movieList.add(movie1);
