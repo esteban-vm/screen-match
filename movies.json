@@ -1,0 +1,34 @@
+[
+  {
+    "Title": "Matrix",
+    "DateOfRelease": 1993,
+    "Duration": 60,
+    "IncludedInPlan": false,
+    "ScoreCounter": 0,
+    "TotalScore": 0.0
+  },
+  {
+    "Title": "Avatar",
+    "DateOfRelease": 2009,
+    "Duration": 162,
+    "IncludedInPlan": false,
+    "ScoreCounter": 0,
+    "TotalScore": 0.0
+  },
+  {
+    "Title": "Top Gun",
+    "DateOfRelease": 1986,
+    "Duration": 109,
+    "IncludedInPlan": false,
+    "ScoreCounter": 0,
+    "TotalScore": 0.0
+  },
+  {
+    "Title": "Mad Max",
+    "DateOfRelease": 1979,
+    "Duration": 88,
+    "IncludedInPlan": false,
+    "ScoreCounter": 0,
+    "TotalScore": 0.0
+  }
+]

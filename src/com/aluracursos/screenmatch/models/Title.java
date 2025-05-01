@@ -1,12 +1,9 @@
 package com.aluracursos.screenmatch.models;
 
 import com.aluracursos.screenmatch.exceptions.DurationException;
-import com.google.gson.annotations.SerializedName;
 
 public class Title implements Comparable<Title> {
-    @SerializedName("Title")
     private String title;
-    @SerializedName("Year")
     private int dateOfRelease;
     private int duration;
     private boolean includedInPlan;
@@ -87,6 +84,8 @@ public class Title implements Comparable<Title> {
 
     @Override
     public String toString() {
-        return "Título: " + title + ", Fecha de lanzamiento: " + dateOfRelease + ", Duración: " + duration + " minutos";
+        return "[Título: " + title +
+                ", Fecha de lanzamiento: " + dateOfRelease +
+                ", Duración: " + duration + " minutos]";
     }
 }
