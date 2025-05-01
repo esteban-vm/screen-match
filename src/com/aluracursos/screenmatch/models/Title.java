@@ -1,5 +1,6 @@
 package com.aluracursos.screenmatch.models;
 
+import com.aluracursos.screenmatch.exceptions.DurationException;
 import com.google.gson.annotations.SerializedName;
 
 public class Title implements Comparable<Title> {
@@ -20,7 +21,12 @@ public class Title implements Comparable<Title> {
     public Title(TitleOMDB titleOMDB) {
         this.title = titleOMDB.title();
         this.dateOfRelease = Integer.parseInt(titleOMDB.year());
-        this.duration = Integer.parseInt(titleOMDB.runtime().substring(0, 2));
+
+        if (titleOMDB.runtime().contains("N/A")) {
+            throw new DurationException("No se pudo convertir la duración porque contiene N/A");
+        }
+
+        this.duration = Integer.parseInt(titleOMDB.runtime().substring(0, 3).trim());
     }
 
     public void showDetails() {
